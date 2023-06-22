@@ -249,9 +249,9 @@ char gps_rmc_parse(gps_info_t info, char *buff)
             buff,
             "%*[^,],%[^,],%*c,%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],,,%[^,]",
             hms_s,
-            info->coord.source.longitude.string,
-            &info->NS,
             info->coord.source.latitude.string,
+            &info->NS,
+            info->coord.source.longitude.string,
             &info->EW,
             info->speed.string,
             info->direction.string,
@@ -290,8 +290,8 @@ char gps_rmc_parse(gps_info_t info, char *buff)
         "\r\n"
         ,info->date.string
         ,info->AV == 'A'?"有效":"无效"
-        ,info->coord.location.latitude.string,info->EW
-        ,info->coord.location.longitude.string,info->NS
+        ,info->coord.location.longitude.string,info->EW
+        ,info->coord.location.latitude.string,info->NS
         ,info->speed.string
         ,info->direction.string
         ,info->ADEN

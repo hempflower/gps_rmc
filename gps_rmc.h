@@ -63,8 +63,8 @@ typedef struct gps_dms_format gps_dms_format_t;
 //  坐标度分秒格式结构体
 struct gps_coord_dms_format
 {
-    gps_dms_format_t latitude;  //  经度
-    gps_dms_format_t longitude; //  维度
+    gps_dms_format_t longitude;  //  经度
+    gps_dms_format_t latitude; //  维度
 };
 typedef struct gps_coord_dms_format gps_coord_dms_format_t;
 #endif //   GPS_RMC_USE_DMS_FORMAT
